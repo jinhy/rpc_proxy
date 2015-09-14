@@ -1,0 +1,7 @@
+/log/
+/lib/python/dist/
+/lib/python/rpc_proxy.egg-info/
+/lib/java/target
+.idea
+*.pyc
+/gen-py

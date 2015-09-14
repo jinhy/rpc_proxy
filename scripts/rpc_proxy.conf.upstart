@@ -1,0 +1,28 @@
+description "rpc_proxy monitor"
+author "wangfei@chunyu.me"
+
+start on startup
+stop on shutdown
+
+respawn
+respawn limit 2 5
+
+console output
+
+
+#setuid work
+#setgid work
+
+exec /usr/local/rpc_proxy/bin/rpc_proxy -c /usr/local/rpc_proxy/config.ini -L /usr/local/rpc_proxy/log/proxy.log &> /usr/local/rpc_proxy/log/app.log
+
+pre-start script
+        logger "start rpc_proxy"
+end script
+
+post-start script
+        logger "rpc_proxy start succeed"
+end script
+
+post-stop script
+        logger "rpc_proxy stop"
+end script
