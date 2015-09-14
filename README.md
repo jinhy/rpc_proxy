@@ -120,3 +120,7 @@ s.run()
 ## 系统架构
 ![architecture](doc/rpc_architecture.jpg)
 
+## Acknowledgments
+- Thanks [c4pt0r](https://github.com/c4pt0r) for providing much help on golang profiling and network socket operations.
+- Thansk [Codis](https://github.com/wandoulabs/codis) for better understanding of zookeeper, network sockets.
+
