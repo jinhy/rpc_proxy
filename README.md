@@ -7,11 +7,12 @@
 * [rpc_proxy Dashboard](https://github.com/wfxiang08/rpc_proxy_dashboard)
 * [rpc_proxy &Go SDK](https://github.com/wfxiang08/rpc_proxy)
 
+
 ## RPC的分层
 rpc_proxy分为3到4层，从前端（服务消费者）往后端（服务提供者）依次标记为L1, L2, L3, L4
 
 ### L1层(应用层)
-* 最前端的RPC Client, 主要由thrift中间语言生成代码
+* 最前端的RPC Client, 主要由thrift中间语言生成代码(首先[安装Thrift](thrift.md)，适当定制，让python支持Thrift中文注释)
 * 以python client为例，如: `thrift --gen py geolocation_service.thrift` 生成GeoClient的代码, 供Client直接调用
 
 ```python
